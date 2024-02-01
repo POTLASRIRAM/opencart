@@ -1,0 +1,46 @@
+21:12:55.098 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:12:55.104 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:12:55.105 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+21:12:55.128 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:12:55.129 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:12:55.130 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+21:12:55.155 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:12:55.156 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:12:55.157 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+21:12:55.177 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:12:55.178 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:12:55.179 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+21:12:55.197 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:12:55.198 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:12:55.199 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+21:12:55.234 [main] INFO  testCases.Test03_LoginDataProvider - *****Test02_LoginPage Started******
+21:12:55.240 [main] INFO  testCases.Test03_LoginDataProvider - ***Home page oepend***
+21:12:55.329 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully Clicked on My Account***
+21:12:55.960 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on Login***
+21:12:55.960 [main] INFO  testCases.Test03_LoginDataProvider - ***Login page oepened***
+21:12:56.164 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered email***
+21:12:56.328 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered password***
+21:12:56.453 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on login button***
+21:12:56.455 [main] INFO  testCases.Test03_LoginDataProvider - ***My Account Page opened***
+21:13:01.021 [main] INFO  testCases.Test03_LoginDataProvider - *****Test02_LoginPage Started******
+21:13:01.022 [main] INFO  testCases.Test03_LoginDataProvider - ***Home page oepend***
+21:13:01.139 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully Clicked on My Account***
+21:13:01.718 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on Login***
+21:13:01.718 [main] INFO  testCases.Test03_LoginDataProvider - ***Login page oepened***
+21:13:01.905 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered email***
+21:13:02.049 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered password***
+21:13:02.136 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on login button***
+21:13:02.137 [main] INFO  testCases.Test03_LoginDataProvider - ***My Account Page opened***
+21:13:06.504 [main] INFO  testCases.Test03_LoginDataProvider - *****Test02_LoginPage Started******
+21:13:06.506 [main] INFO  testCases.Test03_LoginDataProvider - ***Home page oepend***
+21:13:06.612 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully Clicked on My Account***
+21:13:07.098 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on Login***
+21:13:07.100 [main] INFO  testCases.Test03_LoginDataProvider - ***Login page oepened***
+21:13:07.324 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered email***
+21:13:07.458 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully entered password***
+21:13:07.563 [main] INFO  testCases.Test03_LoginDataProvider - ***Successfully clicked on login button***
+21:13:07.564 [main] INFO  testCases.Test03_LoginDataProvider - ***My Account Page opened***
+21:28:27.825 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Test01_Account Registration Instantiated****
+21:28:27.830 [main] DEBUG testCases.Test01_AccountRegistrationTest - **Debug logs Instantiated**
+21:28:27.831 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Test My Account clicked****
+21:28:27.963 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Test Register clicked****

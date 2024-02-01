@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-30T22:48:56 CST" name="Suite" finished-at="2024-01-30T22:49:23 CST" duration-ms="26861">
+    <groups>
+      <group name="Master">
+        <method signature="Test01_AccountRegistrationTest.test_Registration()[pri:0, instance:testCases.Test01_AccountRegistrationTest@4a7f959b]" name="test_Registration" class="testCases.Test01_AccountRegistrationTest"/>
+        <method signature="Test02_LoginPage.test_Login()[pri:0, instance:testCases.Test02_LoginPage@429bffaa]" name="test_Login" class="testCases.Test02_LoginPage"/>
+      </group> <!-- Master -->
+      <group name="Sanity">
+        <method signature="Test01_AccountRegistrationTest.test_Registration()[pri:0, instance:testCases.Test01_AccountRegistrationTest@4a7f959b]" name="test_Registration" class="testCases.Test01_AccountRegistrationTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="Test02_LoginPage.test_Login()[pri:0, instance:testCases.Test02_LoginPage@429bffaa]" name="test_Login" class="testCases.Test02_LoginPage"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-01-30T22:48:56 CST" name="Test" finished-at="2024-01-30T22:49:23 CST" duration-ms="26861">
+      <class name="testCases.Test01_AccountRegistrationTest">
+        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:testCases.Test01_AccountRegistrationTest@4a7f959b]" started-at="2024-01-30T22:48:56 CST" name="openBrowser" finished-at="2024-01-30T22:49:05 CST" duration-ms="8395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="test_Registration()[pri:0, instance:testCases.Test01_AccountRegistrationTest@4a7f959b]" started-at="2024-01-30T22:49:05 CST" name="test_Registration" finished-at="2024-01-30T22:49:09 CST" duration-ms="4801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Registration -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.Test01_AccountRegistrationTest@4a7f959b]" started-at="2024-01-30T22:49:10 CST" name="closeBrowser" finished-at="2024-01-30T22:49:10 CST" duration-ms="354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testCases.Test01_AccountRegistrationTest -->
+      <class name="testCases.Test02_LoginPage">
+        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:testCases.Test02_LoginPage@429bffaa]" started-at="2024-01-30T22:49:10 CST" name="openBrowser" finished-at="2024-01-30T22:49:12 CST" duration-ms="2264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="test_Login()[pri:0, instance:testCases.Test02_LoginPage@429bffaa]" started-at="2024-01-30T22:49:12 CST" name="test_Login" finished-at="2024-01-30T22:49:22 CST" duration-ms="10265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Login -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.Test02_LoginPage@429bffaa]" started-at="2024-01-30T22:49:22 CST" name="closeBrowser" finished-at="2024-01-30T22:49:23 CST" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testCases.Test02_LoginPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

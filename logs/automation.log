@@ -1,0 +1,21 @@
+23:03:06.403 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Email Filled****
+23:03:09.590 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Password Filled****
+23:03:09.590 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Clicked on News_Letter****
+23:03:09.590 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Clicked on Checkbox****
+23:03:09.591 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Clicked on Continue****
+23:03:09.591 [main] DEBUG testCases.Test01_AccountRegistrationTest - **Debug logs Ended**
+23:03:09.591 [main] INFO  testCases.Test01_AccountRegistrationTest - ****Getting Confirmation message****
+23:03:12.220 [main] INFO  testCases.Test02_LoginPage - *****Test02_LoginPage Started******
+23:03:12.221 [main] INFO  testCases.Test02_LoginPage - ***Home page oepend***
+23:03:12.321 [main] INFO  testCases.Test02_LoginPage - ***Successfully Clicked on My Account***
+23:03:13.049 [main] INFO  testCases.Test02_LoginPage - ***Successfully clicked on Login***
+23:03:13.050 [main] INFO  testCases.Test02_LoginPage - ***Login page oepened***
+23:03:13.230 [main] INFO  testCases.Test02_LoginPage - ***Successfully entered email***
+23:03:13.408 [main] INFO  testCases.Test02_LoginPage - ***Successfully entered password***
+23:03:13.536 [main] INFO  testCases.Test02_LoginPage - ***Successfully clicked on login button***
+23:03:18.553 [main] INFO  testCases.Test02_LoginPage - ***My Account Page opened***
+23:03:21.615 [main] INFO  testCases.Test02_LoginPage - ***Validating map output***
+23:03:21.623 [main] INFO  testCases.Test02_LoginPage - ***Validated map output***
+23:03:21.625 [main] INFO  testCases.Test02_LoginPage - ***Login Successful***
+23:03:21.625 [main] INFO  testCases.Test02_LoginPage - ***Performing logout***
+23:03:22.438 [main] INFO  testCases.Test02_LoginPage - ***Logout Successful***
