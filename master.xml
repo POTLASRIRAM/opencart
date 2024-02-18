@@ -12,9 +12,12 @@
 		  </run>
 	  </groups>
     <classes>
-      <class name="testCases.Test01_AccountRegistrationTest"/>
-      <class name="testCases.Test02_LoginPage"/>
+      <!--<class name="testCases.Test01_AccountRegistrationTest"/>-->
+      <!--<class name="testCases.Test02_LoginPage"/>-->
       <!--<class name="testCases.Test03_LoginDataProvider"/>-->
+      <!--<class name="testCases.Test04_Logout"/>-->
+      <class name="testCases.Test05_ForgotPassword"/>
+      <class name="testCases.Test06_SearchProducts"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
