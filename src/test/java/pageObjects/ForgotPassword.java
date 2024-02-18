@@ -14,8 +14,9 @@ public class ForgotPassword extends BaseClass {
 	
 	//Locators
 	
-	By forgotPassword = By.xpath("//div[@class='mb-3']//a[normalize-space()='Forgotten Password']");
-	By cont = By.xpath("//button[@type='submit']");
+	By forgotPassword = By.xpath("//div[@class='form-group']//a[normalize-space()='Forgotten Password']");
+	By email_placeholder = By.xpath("//*[@placeholder=\"E-Mail Address\"]");
+	By cont = By.xpath("//input[@value='Continue']");
 	
 	
 	//Action Methods
@@ -23,6 +24,11 @@ public class ForgotPassword extends BaseClass {
 	public void forgot_password() {
 		driver.findElement(forgotPassword).click();
 		
+	}
+	public void email_placeholder() {
+		
+		String placeholder=driver.findElement(email_placeholder).getAttribute("placeholder");
+		System.out.println("Placeholder : "+placeholder);
 	}
 	
 	public void click_continue() {
