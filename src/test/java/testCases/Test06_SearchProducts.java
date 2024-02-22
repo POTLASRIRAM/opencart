@@ -15,17 +15,27 @@ public class Test06_SearchProducts extends BaseClass{
 	  sp.input_search(input);
 	  sp.search_submit();
 	  sp.clear_data();
-	  if(input.equalsIgnoreCase("iMac")) {
-		  String re_val = sp.returned_value();
+	  if(input.equalsIgnoreCase("iMac"))
+	  {
+		  String re_val = sp.returned_value();  
 		  Assert.assertEquals(input, re_val);
+		  
 	  }
-	  else if(input.equalsIgnoreCase("fitbit")) {
+	  else if(input.equalsIgnoreCase("fitbit")) 
+	  {
 		  String nps = sp.nonProductSearch();
-		  System.out.println(nps);
-		  Assert.assertEquals(nps, "There is no product that matches the search criteria.");
+		  if(nps.equalsIgnoreCase("There is no product that matches the search criteria."))
+		  {
+			  Assert.assertTrue(true);
+		  }
+		  else
+		  {
+			  Assert.fail();
+		  }
 	  }
 	  }
-	  catch(Exception e) {
+	  catch(Exception e)
+	  {
 		  Assert.fail();
 	  }
   }
