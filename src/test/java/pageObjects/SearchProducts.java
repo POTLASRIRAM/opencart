@@ -15,7 +15,8 @@ public class SearchProducts extends BaseClass{
 	By search = By.xpath("//input[@placeholder='Search']");
 	By search_submit = By.xpath("//button[@class='btn btn-default btn-lg']");
 	By ret_val = By.xpath("//a[normalize-space()='iMac']");
-	By nonprodsearch = By.xpath("p[contains(text(),'There is no product that matches the search criter')]");
+	By nonprodsearch = By.xpath("//p[contains(text(),'There is no product that matches the search criter')]");
+	By pd = By.xpath("//h2[normalize-space()='Products meeting the search criteria']");
 	//Action Methods
 	//p[contains(text(),'There is no product that matches the search criter')]
 	public void input_search(String search_value) {
@@ -34,6 +35,7 @@ public class SearchProducts extends BaseClass{
 		return ret_value;
 	}
 	public String nonProductSearch() {
+		System.out.println("Fetching data");
 		String nonpds = driver.findElement(nonprodsearch).getText();
 		System.out.println(nonpds);
 		return nonpds;

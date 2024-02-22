@@ -11,7 +11,7 @@ public class Logout extends BaseClass{
 	}
 	
 	//Locators
-	By logout = By.xpath("//a[@class='list-group-item'][normalize-space()='Logout']");
+	By logout = By.xpath("//a[normalize-space()='Logout']");
 	By logout_conf = By.xpath("//h1[normalize-space()='Account Logout']");
 	
 	//Action methods
