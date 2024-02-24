@@ -33,7 +33,8 @@ public class Test07_LoginAndSearchProducts extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
-  @Test(groups = {"Regression","Master"},dataProvider="dp1",dataProviderClass=DataProviders.class)
+	/*
+  @Test(priority=1,groups = {"Regression","Master"},dataProvider="dp1",dataProviderClass=DataProviders.class)
   public void login_search_products(String input) throws Exception {
 	  
 	  try {
@@ -65,6 +66,47 @@ public class Test07_LoginAndSearchProducts extends BaseClass{
 			  Assert.fail();
 		  }
 	  
+  }
+  
+  @Test(priority=2,groups = {"Regression","Master"})
+  public void search_multiple_products() throws Exception{
+	  SearchProducts sp = new SearchProducts(driver);
+	  sp.input_search(p.getProperty("s_value2"));
+	  sp.search_submit();
+	  Thread.sleep(5000);
+	  int cnt = sp.multiple_Search_Results();
+	  if(cnt>1) {
+		  System.out.println("Matching Products count : "+cnt);
+		  Assert.assertTrue(true);
+	  }
+	  else {
+		  Assert.fail();
+	  }
+	  	  
+  }*/
+  @Test(priority =1,groups = {"Regression","Master"},dataProvider="dp2",dataProviderClass=DataProviders.class)
+  public void product_Search(String caty) {
+	  SearchProducts sp = new SearchProducts(driver);
+	  sp.click_Searchicon();
+	  sp.input_Keyword("Mac");
+	  sp.select_category(caty);
+	  boolean category_rs = sp.result_val();
+	  if(caty.equals("Mac")) {
+		  if(category_rs==true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	  }
+	  else if(caty.equals("PC")) {
+		  if(category_rs==false) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	  }
 	  
   }
 }
