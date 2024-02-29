@@ -11,10 +11,14 @@ public class CompareProduct extends BaseClass{
 	}
 	
 	//Locators
+	By list_view = By.xpath("//button[@id='list-view']");
 	By compare_products = By.xpath("//i[@class='fa fa-exchange']");
 	By product_comparison = By.xpath("//a[normalize-space()='product comparison']");
 	
 	//Action
+	public void click_listview() {
+		driver.findElement(list_view).click();
+	}
 	public void click_compare() {
 		driver.findElement(compare_products).click();
 	}
