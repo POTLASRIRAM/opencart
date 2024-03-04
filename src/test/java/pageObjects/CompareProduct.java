@@ -18,8 +18,28 @@ public class CompareProduct extends BaseClass{
 	By prdct_cmp = By.xpath("//div[@id='content']//div[1]//div[1]//div[2]//div[2]//button[3]");
 	By click_prdct_cmp = By.xpath("//a[normalize-space()='product comparison']");
 	By prdct_model = By.xpath("//*[@id=\"content\"]/table/tbody[1]/tr[4]/td[2]");
+	By imac = By.xpath("//div[@class='alert alert-success alert-dismissible']//a[contains(text(),'iMac')]");
+	By prd_cmp = By.xpath("//a[normalize-space()='product comparison']");
+	By ret_val1 = By.xpath("//h1[normalize-space()='iMac']");
+	
 	
 	//Action
+	public String imac() throws Exception {
+		driver.findElement(imac).click();
+		String ret_val = driver.findElement(ret_val1).getText();
+		Thread.sleep(3000);
+		driver.navigate().back();
+		Thread.sleep(5000);
+		return ret_val;
+	}
+	public String pd_cmp() throws Exception {
+		driver.findElement(product_comparison).click();
+		String ret_val2 = driver.findElement(By.xpath("//strong[normalize-space()='iMac']")).getText();
+		Thread.sleep(3000);
+		driver.navigate().back();
+		Thread.sleep(5000);
+		return ret_val2;
+	}
 	public void click_listview() {
 		driver.findElement(list_view).click();
 	}
