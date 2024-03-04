@@ -87,16 +87,29 @@ public class Test08_ProductComparison extends BaseClass{
 		  CompareProduct cp = new CompareProduct(driver);
 		  cp.click_compare(); 
 		  Thread.sleep(4000);
-		  //driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']//a[contains(text(),'iMac')]")).click();
-	      Set<String> wids = driver.getWindowHandles();
+	      /*
+		  Set<String> wids = driver.getWindowHandles();
 	      List<String> winids = new ArrayList(wids);
 	      System.out.println(winids.size());
-	      String fwin = winids.get(0);
-	      System.out.println(winids.get(0));
+	      String fwin = winids.get(1);
+	      System.out.println(winids.get(1));
 	      driver.switchTo().window(fwin);
-	      
 	      Thread.sleep(4000);
-		  
+		  */
+		  String ret_val1 = cp.imac();
+		  if(ret_val1.equalsIgnoreCase("imac")) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  String ret_val2 = cp.pd_cmp();
+		  if(ret_val2.equalsIgnoreCase("imac")) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
 	  }
   
 }
