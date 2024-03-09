@@ -27,11 +27,13 @@ public class ProductDisplay extends BaseClass{
 	By cont = By.xpath("//button[@id='button-review']");
 	By success_msg = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	//Test3
+	By imactest3 = By.xpath("//div[@class='caption']//a[contains(text(),'iMac')]");
+	By list_view = By.xpath("//i[@class='fa fa-th-list']");
 	By add_to_cart = By.xpath("//button[@id='button-cart']");
 	By shopping_cart = By.xpath("//a[normalize-space()='shopping cart']");
 	By checkout = By.xpath("//a[@class='btn btn-primary']");
-	By fname = By.xpath("//input[@id='input-payment-firstname']");
-	By lname = By.xpath("//input[@id='input-payment-lastname']");
+	//By fname = By.xpath("//input[@id='input-payment-firstname']");
+	//By lname = By.xpath("//input[@id='input-payment-lastname']");
 	By address = By.xpath("//input[@id='input-payment-address-1']");
 	By city = By.xpath("//input[@id='input-payment-city']");
 	By post_code = By.xpath("//input[@id='input-payment-postcode']");
@@ -45,9 +47,58 @@ public class ProductDisplay extends BaseClass{
 	By termsandagreements = By.xpath("//input[@name='agree']");
 	By cont4 = By.xpath("//input[@id='button-payment-method']");
 	By confirm_order = By.xpath("//input[@id='button-confirm']"); 
-	
+	By successful_msg = By.xpath("//p[normalize-space()='Your order has been successfully processed!']");
 	
 	//Action methods
+	//JavaScript executor
+	//Test3
+	public void click_list_view() {
+		driver.findElement(list_view).click();
+	}
+	public void click_imactest3() {
+		driver.findElement(imactest3).click();
+	}
+	public void click_addto_cart() {
+		driver.findElement(add_to_cart).click();
+		
+	}
+	public void click_shopping_cart() {
+		driver.findElement(shopping_cart).click();
+	}
+	public void click_checkout() {
+		driver.findElement(checkout).click();
+	}
+	public void click_cont1() {
+		driver.findElement(cont1).click();
+	}
+	public void click_cont2() {
+		driver.findElement(cont2).click();
+		System.out.println("This is cont2..");
+		}
+	public void click_cont3() {
+		driver.findElement(cont3).click();
+		System.out.println("This is cont3..");
+	}
+	public void click_terms_and_conditions() {
+		driver.findElement(termsandagreements).click();
+	}
+	public void click_cont4() {
+		driver.findElement(cont4).click();
+	}
+	public void click_confirm_order() {
+		driver.findElement(confirm_order).click();
+	}
+	public boolean retrieve_success_msg() {
+		boolean ress = false;
+		String res = driver.findElement(successful_msg).getText();
+		if(res.contains("successful")) {
+			ress = true;
+		}
+		else {
+			ress = false;
+		}
+		return ress;
+	}
 	//Test1
 	public void click_imacname() {
 		driver.findElement(imac).click();
@@ -112,7 +163,7 @@ public class ProductDisplay extends BaseClass{
 		}
 		return msg_output;
 	}
-	//Test3
+	
 	
 
 }
