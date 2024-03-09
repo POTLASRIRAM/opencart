@@ -94,12 +94,33 @@ public class Test09_ProductDisplayPage extends BaseClass {
 	  @Test(priority=3,groups = {"Regression","Master"})
 	  public void test_navigation_productdisplay()throws Exception{
 		  SearchProducts sp = new SearchProducts(driver);
-		  sp.input_search("apple cinema 30");
+		  sp.input_search("imac");
 		  sp.click_submit();
 		  Thread.sleep(5000);
 		  ProductDisplay pd = new ProductDisplay(driver);
-		  pd.click_apple_cinema();
+		  pd.click_list_view();
+		  pd.click_imactest3();
+		  pd.click_addto_cart();
+		  pd.click_shopping_cart();
+		  pd.click_checkout();
+		  pd.click_cont1();
+		  Thread.sleep(3000);
+		  pd.click_cont2();
+		  Thread.sleep(3000);
+		  pd.click_cont3();
+		  Thread.sleep(3000);
+		  pd.click_terms_and_conditions();
+		  Thread.sleep(3000);
+		  pd.click_cont4();
+		  Thread.sleep(3000);
+		  pd.click_confirm_order();
+		  boolean res = pd.retrieve_success_msg();
+		  if(res == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
 		  
-	
-  
+}
 }
