@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ProductDisplay extends BaseClass{
 
@@ -48,9 +49,25 @@ public class ProductDisplay extends BaseClass{
 	By cont4 = By.xpath("//input[@id='button-payment-method']");
 	By confirm_order = By.xpath("//input[@id='button-confirm']"); 
 	By successful_msg = By.xpath("//p[normalize-space()='Your order has been successfully processed!']");
+	//Test4
+	By original_price = By.xpath("//*[@id=\"content\"]/div[3]/div/div/div[2]/div[1]/p[2]/span[2]");
+	WebElement og_price;
 	
 	//Action methods
-	//JavaScript executor
+	//Test4
+	public boolean validate_original_price() {
+		boolean res = false;
+		og_price = driver.findElement(original_price);
+		String textDecoration = og_price.getCssValue("text-decoration");
+		 boolean isStruckThrough = textDecoration.contains("line-through");
+		 if(isStruckThrough == true) {
+			 res = true;
+		 }
+		 else {
+			 res = false;
+		 }
+		 return res;
+	}
 	//Test3
 	public void click_list_view() {
 		driver.findElement(list_view).click();
