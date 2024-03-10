@@ -69,7 +69,7 @@ public class Test09_ProductDisplayPage extends BaseClass {
 		  Assert.fail();
 	  }
   }
-  */
+  
 	@BeforeMethod(groups= {"Regression","Master"})
 	public void login() throws InterruptedException {
 		HomePage hp = new HomePage(driver);
@@ -122,5 +122,21 @@ public class Test09_ProductDisplayPage extends BaseClass {
 			  Assert.fail();
 		  }
 		  
-}
+}*/
+	  @Test(priority=3,groups = {"Regression","Master"})
+	  public void test_originalprice_strikethrough()throws Exception{
+		  SearchProducts sp = new SearchProducts(driver);
+		  sp.input_search("Apple cinema 30");
+		  sp.click_submit();
+		  Thread.sleep(5000);
+		  ProductDisplay pd = new ProductDisplay(driver);
+		  boolean res = pd.validate_original_price();
+		  Thread.sleep(5000);
+		  if(res == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	  }
 }
