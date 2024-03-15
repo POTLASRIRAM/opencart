@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.Logout;
+import pageObjects.MyAccountPage;
 import pageObjects.ProductDisplay;
 import pageObjects.SearchProducts;
 import pageObjects.WishList;
@@ -34,6 +35,7 @@ public class Test11_WishList extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
+	/*
   @Test(priority =1, groups = {"Regression","Sanity","Master"})
   public void test1_wishlist() throws Exception{
 	  SearchProducts sp = new SearchProducts(driver);
@@ -52,5 +54,43 @@ public class Test11_WishList extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-  }
+  }*/
+	
+	@Test(priority =2, groups = {"Regression","Sanity","Master"})
+	  public void test2_wishlist2() throws Exception{
+		  SearchProducts sp = new SearchProducts(driver);
+		  sp.input_search("iMac");
+		  sp.click_submit();
+		  Thread.sleep(3000);
+		  ProductDisplay pd = new ProductDisplay(driver);
+		  pd.click_imacname();
+		  WishList wl = new WishList(driver);
+		  wl.click_add_to_wishlist();
+		  Thread.sleep(3000);
+		  boolean top_res = wl.click_top_wishlist();
+		  System.out.println(top_res);
+		  Thread.sleep(3000);
+		  boolean footer_res = wl.click_footer_wishlist();
+		  System.out.println(footer_res);
+		  HomePage hp  = new HomePage(driver);
+		  Thread.sleep(3000);
+		  hp.clickmy_Account();
+		  hp.click_myaccount_button();
+		  Thread.sleep(3000);
+		  wl.click_modify_wishlist();
+		  System.out.println("Product Removed...");
+		  Thread.sleep(3000);
+		  System.out.println("Retreiving product removal output...");
+		  Thread.sleep(3000);
+		  boolean remove_ot = wl.ret_remove_output();
+		  System.out.println("Retreived product removal output...");
+		  System.out.println(remove_ot);
+		  if(remove_ot == true && top_res == true && footer_res == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  
+	}
 }
