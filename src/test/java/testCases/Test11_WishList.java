@@ -54,10 +54,10 @@ public class Test11_WishList extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-  }*/
+  }
 	
 	@Test(priority =2, groups = {"Regression","Sanity","Master"})
-	  public void test2_wishlist2() throws Exception{
+	  public void test2_wishlist() throws Exception{
 		  SearchProducts sp = new SearchProducts(driver);
 		  sp.input_search("iMac");
 		  sp.click_submit();
@@ -92,5 +92,48 @@ public class Test11_WishList extends BaseClass{
 			  Assert.fail();
 		  }
 		  
+	}
+	
+	
+	@Test(priority =3, groups = {"Regression","Sanity","Master"})
+	  public void test3_wishlist() throws Exception{
+		  SearchProducts sp = new SearchProducts(driver);
+		  sp.input_search("iMac");
+		  sp.click_submit();
+		  Thread.sleep(3000);
+		  ProductDisplay pd = new ProductDisplay(driver);
+		  pd.click_imacname();
+		  WishList wl = new WishList(driver);
+		  wl.click_add_to_wishlist();
+		  //wl.ret_product_count();
+		  Thread.sleep(2000);
+		  wl.click_add_to_wishlist();
+		  wl.click_top_wishlist();
+		  boolean res = wl.ret_product_count();
+		  if(res == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	}
+	*/
+	@Test(priority =4, groups = {"Regression","Sanity","Master"})
+	  public void test4_wishlist() throws Exception{
+		HomePage hp  = new HomePage(driver);
+		  Thread.sleep(3000);
+		  hp.clickmy_Account();
+		  hp.click_myaccount_button();
+		  Thread.sleep(3000);
+		  WishList wl = new WishList(driver);
+		  wl.click_modify_wishlist();
+		  Thread.sleep(4000);
+		  boolean res = wl.get_brudcrumb_info();
+		  if(res == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
 	}
 }
