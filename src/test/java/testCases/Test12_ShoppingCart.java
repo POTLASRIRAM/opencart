@@ -90,8 +90,10 @@ public class Test12_ShoppingCart extends BaseClass {
 		  sc.test2_click_cart();
 		  sc.test2_click_view_cart();
 		  Thread.sleep(3000);
-		  boolean res = sc.test2_ret_output();
-		  if(res == true) {
+		  sc.test3_input();
+		  sc.test3_click_update();
+		  boolean res = sc.test3_ret_otpt();
+		  if(res == false) {
 			  Assert.assertTrue(true);
 		  }
 		  else {
