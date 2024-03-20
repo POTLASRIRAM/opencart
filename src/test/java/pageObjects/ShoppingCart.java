@@ -21,7 +21,15 @@ public class ShoppingCart extends BaseClass{
 	By view_cart = By.xpath("//strong[normalize-space()='View Cart']");
 	By quantity = By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input");
 	
+	//Test3
+	By update_quantity = By.xpath("//*[@id=\\\"content\\\"]/form/div/table/tbody/tr/td[4]/div/input");
+	
 	//Action Methods
+	//Test3
+	public void test3_input() {
+		
+	}
+	
 	//Test2
 	public void test2_click_cart() {
 		driver.findElement(cart).click();
@@ -29,18 +37,19 @@ public class ShoppingCart extends BaseClass{
 	public void test2_click_view_cart() {
 		driver.findElement(view_cart).click();
 	}
-	public String test2_ret_output() {
+	public boolean test2_ret_output() {
 		boolean res = false;
-		String weight = driver.findElement(quantity).getText().trim();
-		System.out.println(weight);
-		/*int count = Integer.parseInt(weight);
+		String weight = driver.findElement(quantity).getAttribute("value");
+		System.out.println("Printing weight....");
+		System.out.println("Quantity :"+weight);
+		int count = Integer.parseInt(weight);
 		if(count>1) {
 			res = true;
 		}
 		else {
 			res = false;
-		}*/
-		return weight;
+		}
+		return res;
 	}
 	//Test1
 	
