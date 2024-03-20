@@ -22,12 +22,32 @@ public class ShoppingCart extends BaseClass{
 	By quantity = By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input");
 	
 	//Test3
-	By update_quantity = By.xpath("//*[@id=\\\"content\\\"]/form/div/table/tbody/tr/td[4]/div/input");
+	By update_quantity = By.xpath("//input[contains(@name,'quantity')]");
+	By update_button = By.xpath("//i[@class='fa fa-refresh']");
+	By success_msg = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	
 	//Action Methods
 	//Test3
-	public void test3_input() {
-		
+	public void test3_input() throws Exception{
+		driver.findElement(update_quantity).clear();
+		//Thread.sleep(3000);
+		driver.findElement(update_quantity).sendKeys("4");
+		Thread.sleep(3000);
+	}
+	public void test3_click_update() {
+		driver.findElement(update_button).click();
+	}
+	
+	public boolean test3_ret_otpt() {
+		boolean res = false;
+		String otpt = driver.findElement(success_msg).getText();
+		if(otpt.equals("Success: You have modified your shopping cart!")) {
+			res = true;
+		}
+		else {
+			res = false;
+		}
+		return res;
 	}
 	
 	//Test2
