@@ -76,7 +76,7 @@ public class Test12_ShoppingCart extends BaseClass {
 			  Assert.fail();
 		  }
 	}
-	*/
+	
 	@Test(priority =3,groups= {"Regression","Sanity","Master"})
 	  public void test3_shoppingCart() throws Exception {
 		  SearchProducts sp = new SearchProducts(driver);
@@ -99,5 +99,33 @@ public class Test12_ShoppingCart extends BaseClass {
 		  else {
 			  Assert.fail();
 		  }
+	}
+	*/
+	@Test(priority =4,groups= {"Regression","Sanity","Master"})
+	  public void test4_shoppingCart() throws Exception {
+		  SearchProducts sp = new SearchProducts(driver);
+		  sp.input_search("iMac");
+		  sp.click_submit();
+		  AddtoCart ac = new AddtoCart(driver);
+		  ac.click_addto_cart();
+		  ac.click_addto_cart();
+		  Thread.sleep(5000);
+		  ShoppingCart sc = new ShoppingCart(driver);
+		  sc.test2_click_cart();
+		  sc.test2_click_view_cart();
+		  Thread.sleep(3000);
+		  boolean image = sc.test4_validate_image();
+		  boolean name = sc.test4_validate_name();
+		  boolean model = sc.test4_validate_model();
+		  boolean quantity = sc.test2_ret_output();
+		  boolean unitprice = sc.test4_validate_unitprice();
+		  boolean totalprice = sc.test4_validate_totalprice();
+		  if(image == true && name == true && model == true && quantity == true && unitprice == true && totalprice == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  
 	}
 }
