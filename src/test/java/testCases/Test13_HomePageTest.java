@@ -59,10 +59,25 @@ public class Test13_HomePageTest extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-}*/
+}
 	@Test(priority =2,groups = {"Sanity","Regression","Master"})
 	  public void test2_HomePage() throws Exception{
 		HomePage hp = new HomePage(driver);
 		hp.test2_Hover_Desktop_pc();
+		hp.test2_Pc_Continue();
+		String title = hp.getpagetitle();
+		  if(title.equals("Your Store")) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	}
+	*/
+	@Test(priority = 3,groups = {"Sanity","Regression","Master"})
+	  public void test3_HomePage() throws Exception{
+		HomePage hp = new HomePage(driver);
+		hp.test3_click_HomePage();
+		hp.test3_get_images();
 	}
 }
