@@ -50,7 +50,19 @@ public class ShoppingCart extends BaseClass{
     //Test1
     By continue_shopping = By.xpath("//a[@class='btn btn-default']");
     
+    //Test14_Checkout
+    //Test1
+    By shopping_cart = By.xpath("//a[normalize-space()='shopping cart']");
+    By checkout = By.xpath("//a[@class='btn btn-primary']");
+    		
 	//Action Methods
+    //Test14_Checkout
+    public void test1_click_checkout() throws Exception{
+    	driver.findElement(shopping_cart).click();
+    	Thread.sleep(3000);
+    	driver.findElement(checkout).click();
+    }
+    
     //Test12_ShoppingCart
     //Test1
     public void test1_Click_Continue_Shopping() {
