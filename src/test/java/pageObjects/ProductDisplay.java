@@ -1,3 +1,4 @@
+
 package pageObjects;
 
 import org.openqa.selenium.By;
@@ -33,8 +34,6 @@ public class ProductDisplay extends BaseClass{
 	By add_to_cart = By.xpath("//button[@id='button-cart']");
 	By shopping_cart = By.xpath("//a[normalize-space()='shopping cart']");
 	By checkout = By.xpath("//a[@class='btn btn-primary']");
-	//By fname = By.xpath("//input[@id='input-payment-firstname']");
-	//By lname = By.xpath("//input[@id='input-payment-lastname']");
 	By address = By.xpath("//input[@id='input-payment-address-1']");
 	By city = By.xpath("//input[@id='input-payment-city']");
 	By post_code = By.xpath("//input[@id='input-payment-postcode']");
@@ -54,6 +53,20 @@ public class ProductDisplay extends BaseClass{
 	WebElement og_price;
 	
 	//Action methods
+	//Test5
+	public boolean validate_displayed_page() {
+		boolean res = false;
+		String url = driver.getCurrentUrl();
+		String page_title = driver.getTitle();
+		if(page_title.equals("Search - imac")) {
+			res = true;
+		}
+		else {
+			res = false;
+		}
+		return res;
+		
+	}
 	//Test4
 	public boolean validate_original_price() {
 		boolean res = false;
