@@ -54,7 +54,7 @@ public class Test14_Checkout extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-  }*/
+  }
 	@Test(priority = 2, groups = {"Regression","Sanity","Master"})
 	  public void test2_checkout()throws Exception {
 		  SearchProducts sp = new SearchProducts(driver);
@@ -77,5 +77,32 @@ public class Test14_Checkout extends BaseClass{
 		  else {
 			  Assert.fail();
 		  }
+	}
+	*/
+	@Test(priority = 3, groups = {"Regression","Sanity","Master"})
+	  public void test3_checkout()throws Exception {
+		  SearchProducts sp = new SearchProducts(driver);
+		  sp.input_search("iMac");
+		  sp.click_submit();
+		  AddtoCart ac = new AddtoCart(driver);
+		  ac.click_addto_cart();
+		  ShoppingCart sc = new ShoppingCart(driver);
+		  Thread.sleep(3000);
+		  sc.test1_click_checkout();
+		  Checkout co = new Checkout(driver);
+		  Thread.sleep(3000);
+		  co.test3_click_cont1();
+		  co.test3_click_cont2();
+		  co.test3_payments_add_comments();
+		  co.test3_click_cont3();
+		  Thread.sleep(3000);
+		  boolean output = co.test3_ret_comment_output();
+		  if(output == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  
 	}
 }
