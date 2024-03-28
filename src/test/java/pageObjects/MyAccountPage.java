@@ -15,10 +15,15 @@ public class MyAccountPage extends BaseClass{
 	//Locators
 	
 	By myaccount = By.xpath("//*[@id=\"content\"]/h2[1]");
+	By homemyaccount = By.xpath("//span[normalize-space()='My Account']");
 	By logout = By.linkText("Logout");
 	
 	//Action Methods
 	JavascriptExecutor js = (JavascriptExecutor)driver;
+	public void click_myaccount() {
+		driver.findElement(homemyaccount).click();
+	}
+	
 	public boolean check_Myaccount() throws Exception {
 		String myacc_actual = driver.findElement(myaccount).getText();
 		boolean acc_actual;
