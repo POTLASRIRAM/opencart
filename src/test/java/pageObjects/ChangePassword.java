@@ -17,7 +17,29 @@ public class ChangePassword extends BaseClass{
 	By cont = By.xpath("//input[@value='Continue']");
 	By success_msg = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	
+	//Test3
+	By back = By.xpath("//a[@class='btn btn-default']");
+			
 	//Action Methods
+	//Test3
+	public void test3_click_back() {
+		driver.findElement(back).click();
+	}
+	public void test3_input_password() {
+		
+	}
+	public boolean test3_ret_res() {
+		boolean output=false;
+		String word = driver.findElement(password).getAttribute("placeholder");
+		if(word.equals("Password")) {
+			output = true;
+		}
+		else {
+			output = false;
+		}
+		return output;
+	}
+	
 	//Test2
 	public boolean test2_get_password_type() {
 		boolean res = false;
