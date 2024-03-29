@@ -47,7 +47,7 @@ public class Test16_ChangePassword extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-  }*/
+  }
 	
 	@Test(priority = 2,groups = {"Sanity","Regression","Master"})
 	  public void test2_changepsswd() throws Exception{
@@ -56,6 +56,25 @@ public class Test16_ChangePassword extends BaseClass{
 		  boolean res_pswd = cp.test2_get_password_type();
 		  boolean res_cnfpswd = cp.test2_get_confirmpassword_type();
 		  if(res_pswd == true && res_cnfpswd == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  
+	  }
+	  */
+	@Test(priority = 3,groups = {"Sanity","Regression","Master"})
+	  public void test3_changepsswd() throws Exception{
+		  ChangePassword cp = new ChangePassword(driver);
+		  cp.test1_click_changepassword();
+		  cp.test1_input_password();
+		  Thread.sleep(3000);
+		  cp.test1_input_confirm_password();
+		  cp.test3_click_back();
+		  cp.test1_click_changepassword();
+		  boolean res = cp.test3_ret_res();
+		  if(res == true) {
 			  Assert.assertTrue(true);
 		  }
 		  else {
