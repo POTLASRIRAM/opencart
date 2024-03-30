@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+	  <parameter name="OS" value="windows"/>
+	  <parameter name="browser" value="chrome"/>
+	  <groups>
+		  <run><include name="Master"></include>
+		  </run>
+	  </groups>
+    <classes>
+	  <!--<class name="testCases.Test01_AccountRegistrationTest"/>
+      <class name="testCases.Test02_LoginPage"/>
+      <class name="testCases.Test03_LoginDataProvider"/>
+      <class name="testCases.Test04_Logout"/>
+      <class name="testCases.Test05_ForgotPassword"/>
+      <class name="testCases.Test06_SearchProducts"/>
+      <class name="testCases.Test07_LoginAndSearchProducts"/>
+      <class name="testCases.Test08_ProductComparison"/>
+      <class name="testCases.Test09_ProductDisplayPage"/>
+      <class name="testCases.Test10_AddtoCart"/>
+      <class name="testCases.Test11_WishList"/>
+      <class name="testCases.Test12_ShoppingCart"/>
+      <class name="testCases.Test13_HomePageTest"/>
+      <class name="testCases.Test14_Checkout"/>
+      <class name="testCases.Test15_MyAccountInformation"/>
+      <class name="testCases.Test16_ChangePassword"/>
+      <class name="testCases.Test17_AddressBook"/>-->
+      <class name="testCases.Test18_OrderHistory"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
