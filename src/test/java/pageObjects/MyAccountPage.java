@@ -18,6 +18,7 @@ public class MyAccountPage extends BaseClass{
 	By homemyaccount = By.xpath("//span[normalize-space()='My Account']");
 	By logout = By.linkText("Logout");
 	
+	
 	//Action Methods
 	JavascriptExecutor js = (JavascriptExecutor)driver;
 	public void click_myaccount() {

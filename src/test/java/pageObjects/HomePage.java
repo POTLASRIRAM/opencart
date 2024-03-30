@@ -28,8 +28,9 @@ public class HomePage extends BaseClass{
 	
 	By myAccount = By.xpath("//span[normalize-space()='My Account']");
 	By myAccountbutton = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='My Account']");
-	By register = By.xpath("//a[normalize-space()='Register']");
+	//By register = By.xpath("//a[normalize-space()='Register']");
 	By login = By.xpath("//a[normalize-space()='Login']");
+	By register = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']");
 	By desktop = By.xpath("//a[normalize-space()='Desktops']");
 	By alldesktops = By.xpath("//a[normalize-space()='Show All Desktops']");
 	
@@ -65,6 +66,9 @@ public class HomePage extends BaseClass{
 	public String getpagetitle() {
 		String title = driver.getTitle();
 		return title;
+	}
+	public void test1_click_register() {
+		driver.findElement(register).click();
 	}
 	
 	//Test2
