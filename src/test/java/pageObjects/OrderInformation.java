@@ -17,10 +17,15 @@ public class OrderInformation extends BaseClass {
 	//Test1
 	By view = By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/a[1]/i[1]");
 	By order_id = By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]");
-	
+	By retrn = By.xpath("//i[@class='fa fa-reply']");
 	
 	
 	//Action Methods
+	//Test2
+	public void test2_click_return() {
+		driver.findElement(retrn).click();
+	}
+	
 	//Test1
 	public void test1_click_view() {
 		driver.findElement(view).click();
