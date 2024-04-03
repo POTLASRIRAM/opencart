@@ -10,6 +10,7 @@ import pageObjects.LoginPage;
 import pageObjects.Logout;
 import pageObjects.OrderHistory;
 import pageObjects.OrderInformation;
+import pageObjects.ProductReturns;
 import testBase.BaseClass;
 
 public class Test19_OrderInformation extends BaseClass{
@@ -33,6 +34,7 @@ public class Test19_OrderInformation extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
+	/*
   @Test(priority = 1, groups = {"Sanity","Regression","Master"})
   public void test1_order_information()throws Exception {
 	  OrderHistory oh = new OrderHistory(driver);
@@ -40,6 +42,22 @@ public class Test19_OrderInformation extends BaseClass{
 	  OrderInformation oi = new OrderInformation(driver);
 	  oi.test1_click_view();
 	  boolean res = oi.test1_ret_otp();
+	  if(res==true) {
+		  Assert.assertTrue(true);
+	  }
+	  else {
+		  Assert.fail();
+	  }
+  }*/
+  @Test(priority = 1, groups = {"Sanity","Regression","Master"})
+  public void test2_order_information()throws Exception {
+	  OrderHistory oh = new OrderHistory(driver);
+	  oh.test1_click_orderhistory();
+	  OrderInformation oi = new OrderInformation(driver);
+	  oi.test1_click_view();
+	  oi.test2_click_return();
+	  ProductReturns pr = new ProductReturns(driver);
+	  boolean res = pr.test1_ret_op();
 	  if(res==true) {
 		  Assert.assertTrue(true);
 	  }
