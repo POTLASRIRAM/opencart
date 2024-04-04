@@ -13,8 +13,12 @@ public class OrderHistory extends BaseClass{
 	//Test1
 	By orderhistory = By.xpath("//a[@class='list-group-item'][normalize-space()='Order History']");
 	By orderscount = By.xpath("//*[@id=\"content\"]/div[1]/table/tbody/tr");
+	By conti = By.xpath("//a[normalize-space()='Continue']");
 	
 	//Action Methods
+	public void test_click_continue() {
+		driver.findElement(conti).click();
+	}
 	//Test1
 	public void test1_click_orderhistory() {
 		driver.findElement(orderhistory).click();

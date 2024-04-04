@@ -21,6 +21,19 @@ public class OrderInformation extends BaseClass {
 	
 	
 	//Action Methods
+	//Test3
+	public boolean test3_ret_output() {
+		boolean res = false;
+		String title = driver.getTitle();
+		if(title.equals("Order History")) {
+			res = true;
+		}
+		else {
+			res = false;
+		}
+		return res;
+	}
+	
 	//Test2
 	public void test2_click_return() {
 		driver.findElement(retrn).click();
