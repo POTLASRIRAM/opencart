@@ -28,8 +28,10 @@
       <class name="testCases.Test14_Checkout"/>
       <class name="testCases.Test15_MyAccountInformation"/>
       <class name="testCases.Test16_ChangePassword"/>
-      <class name="testCases.Test17_AddressBook"/>-->
+      <class name="testCases.Test17_AddressBook"/>
       <class name="testCases.Test18_OrderHistory"/>
+      <class name="testCases.Test19_OrderInformation"/>-->
+      <class name="testCases.Test20_ProductReturns"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
