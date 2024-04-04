@@ -13,7 +13,7 @@ import pageObjects.OrderInformation;
 import pageObjects.ProductReturns;
 import testBase.BaseClass;
 
-public class Test19_OrderInformation extends BaseClass{
+public class Test20_ProductReturns extends BaseClass{
 	@BeforeMethod(groups= {"Regression","Master"})
 	public void login() throws InterruptedException {
 		HomePage hp = new HomePage(driver);
@@ -34,46 +34,19 @@ public class Test19_OrderInformation extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
-	/*
-  @Test(priority = 1, groups = {"Sanity","Regression","Master"})
-  public void test1_order_information()throws Exception {
-	  OrderHistory oh = new OrderHistory(driver);
-	  oh.test1_click_orderhistory();
-	  OrderInformation oi = new OrderInformation(driver);
-	  oi.test1_click_view();
-	  boolean res = oi.test1_ret_otp();
-	  if(res==true) {
-		  Assert.assertTrue(true);
-	  }
-	  else {
-		  Assert.fail();
-	  }
-  }
-  @Test(priority = 2, groups = {"Sanity","Regression","Master"})
-  public void test2_order_information()throws Exception {
+	
+  @Test(priority = 1,groups = {"Regression","Sanity","Master"})
+  public void test1_product_return()throws Exception {
 	  OrderHistory oh = new OrderHistory(driver);
 	  oh.test1_click_orderhistory();
 	  OrderInformation oi = new OrderInformation(driver);
 	  oi.test1_click_view();
 	  oi.test2_click_return();
 	  ProductReturns pr = new ProductReturns(driver);
-	  boolean res = pr.test1_ret_op();
-	  if(res==true) {
-		  Assert.assertTrue(true);
-	  }
-	  else {
-		  Assert.fail();
-	  }
-  }*/
-  @Test(priority = 3, groups = {"Sanity","Regression","Master"})
-  public void test3_order_information()throws Exception {
-	  OrderHistory oh = new OrderHistory(driver);
-	  oh.test1_click_orderhistory();
-	  OrderInformation oi = new OrderInformation(driver);
-	  oi.test1_click_view();
-	  oh.test_click_continue();
-	  boolean result = oi.test3_ret_output();
-	  if(result==true) {
+	  pr.test1_click_returnreason();
+	  pr.test1_click_submit();
+	  boolean result = pr.test1_ret_otpt();
+	  if(result == true) {
 		  Assert.assertTrue(true);
 	  }
 	  else {
