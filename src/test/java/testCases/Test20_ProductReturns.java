@@ -12,6 +12,7 @@ import pageObjects.OrderHistory;
 import pageObjects.OrderInformation;
 import pageObjects.ProductReturns;
 import testBase.BaseClass;
+import utilities.DataProviders;
 
 public class Test20_ProductReturns extends BaseClass{
 	@BeforeMethod(groups= {"Regression","Master"})
@@ -34,7 +35,7 @@ public class Test20_ProductReturns extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
-	
+	/*
   @Test(priority = 1,groups = {"Regression","Sanity","Master"})
   public void test1_product_return()throws Exception {
 	  OrderHistory oh = new OrderHistory(driver);
@@ -53,4 +54,28 @@ public class Test20_ProductReturns extends BaseClass{
 		  Assert.fail();
 	  }
   }
+  */
+	
+	@Test(dataProvider = "dp4",dataProviderClass=DataProviders.class,priority = 2,groups = {"Regression","Sanity","Master"})
+	  public void test2_product_return(String email)throws Exception {
+		  OrderHistory oh = new OrderHistory(driver);
+		  oh.test1_click_orderhistory();
+		  OrderInformation oi = new OrderInformation(driver);
+		  oi.test1_click_view();
+		  oi.test2_click_return();
+		  ProductReturns pr = new ProductReturns(driver);
+		  pr.test2_input_email(email);
+		  pr.test1_click_returnreason();
+		  pr.test1_click_submit();
+		  Thread.sleep(4000);
+		  /*
+		  boolean result = pr.test1_ret_otpt();
+		  if(result == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+		  */
+	  }
 }
