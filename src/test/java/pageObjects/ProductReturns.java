@@ -16,7 +16,9 @@ public class ProductReturns extends BaseClass{
 	By returnreason = By.xpath("//*[@id=\"content\"]/form/fieldset[2]/div[4]/div/div[3]/label/input");
 	By submit = By.xpath("//input[@value='Submit']");
 	By endmsg = By.xpath("//p[contains(text(),'Thank you for submitting your return request. Your')]");
-	
+	//Test2
+	By Email = By.xpath("//input[@id='input-email']");
+			
 	//Action Methods
 	public boolean test1_ret_op() {
 		boolean output = false;
@@ -29,6 +31,12 @@ public class ProductReturns extends BaseClass{
 		}
 		return output;
 	}
+	//Test2
+	public void test2_input_email(String email) {
+	     driver.findElement(Email).sendKeys(email);
+	}
+	
+	
 	//Test1
 	public void test1_click_returnreason() {
 		driver.findElement(returnreason).click();
