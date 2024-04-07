@@ -30,8 +30,10 @@
       <class name="testCases.Test16_ChangePassword"/>
       <class name="testCases.Test17_AddressBook"/>
       <class name="testCases.Test18_OrderHistory"/>
-      <class name="testCases.Test19_OrderInformation"/>-->
+      <class name="testCases.Test19_OrderInformation"/>
       <class name="testCases.Test20_ProductReturns"/>
+      <class name="testCases.Test21_Downloads"/>-->
+      <class name="testCases.Test22_RewardPoints"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
