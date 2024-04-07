@@ -18,6 +18,7 @@ public class ProductReturns extends BaseClass{
 	By endmsg = By.xpath("//p[contains(text(),'Thank you for submitting your return request. Your')]");
 	//Test2
 	By Email = By.xpath("//input[@id='input-email']");
+	By warning_msg = By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]");
 			
 	//Action Methods
 	public boolean test1_ret_op() {
@@ -32,8 +33,19 @@ public class ProductReturns extends BaseClass{
 		return output;
 	}
 	//Test2
-	public void test2_input_email(String email) {
-	     driver.findElement(Email).sendKeys(email);
+	public boolean test2_input_email(String email) {
+		boolean res = false;
+	    driver.findElement(Email).sendKeys(email);
+	    driver.findElement(submit).click();
+	    String error= driver.findElement(warning_msg).getText();
+	    if(error.matches("^[a-zA-Z].*$")) {
+	    	res = true;
+	    }
+	    else {
+	    	res = true;
+	    }
+	    return res;
+	    
 	}
 	
 	
