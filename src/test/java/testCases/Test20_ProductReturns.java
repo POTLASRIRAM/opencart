@@ -64,18 +64,15 @@ public class Test20_ProductReturns extends BaseClass{
 		  oi.test1_click_view();
 		  oi.test2_click_return();
 		  ProductReturns pr = new ProductReturns(driver);
-		  pr.test2_input_email(email);
 		  pr.test1_click_returnreason();
-		  pr.test1_click_submit();
 		  Thread.sleep(4000);
-		  /*
-		  boolean result = pr.test1_ret_otpt();
+		  boolean result =  pr.test2_input_email(email);
 		  if(result == true) {
 			  Assert.assertTrue(true);
 		  }
 		  else {
 			  Assert.fail();
 		  }
-		  */
+		  
 	  }
 }
