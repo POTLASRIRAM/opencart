@@ -20,6 +20,11 @@ public class ProductReturns extends BaseClass{
 	By Email = By.xpath("//input[@id='input-email']");
 	By warning_msg = By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]");
 			
+	//Test3
+	By returns = By.xpath("//a[@class='list-group-item'][normalize-space()='Returns']");
+	By view = By.xpath("//tbody/tr[1]/td[6]/a[1]/i[1]");
+	
+	
 	//Action Methods
 	public boolean test1_ret_op() {
 		boolean output = false;
@@ -32,6 +37,27 @@ public class ProductReturns extends BaseClass{
 		}
 		return output;
 	}
+	//Test3
+	
+	public void test3_click_returns() {
+		driver.findElement(returns).click();
+	}
+	public void test3_click_view() {
+		driver.findElement(view).click();
+	}
+	
+	public boolean test3_return_output() {
+		boolean otpt = false;
+		String title = driver.getTitle();
+		if(title.equals("Return Information")) {
+			otpt = true;
+		}
+		else {
+			otpt = false;
+		}
+		return otpt;
+	}
+	
 	//Test2
 	public boolean test2_input_email(String email) {
 		boolean res = false;
