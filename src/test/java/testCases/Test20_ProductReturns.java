@@ -54,7 +54,7 @@ public class Test20_ProductReturns extends BaseClass{
 		  Assert.fail();
 	  }
   }
-  */
+  
 	
 	@Test(dataProvider = "dp4",dataProviderClass=DataProviders.class,priority = 2,groups = {"Regression","Sanity","Master"})
 	  public void test2_product_return(String email)throws Exception {
@@ -74,5 +74,18 @@ public class Test20_ProductReturns extends BaseClass{
 			  Assert.fail();
 		  }
 		  
+	  }*/
+	@Test(priority = 3,groups = {"Regression","Sanity","Master"})
+	  public void test3_product_return()throws Exception {
+		  ProductReturns pr = new ProductReturns(driver);
+		  pr.test3_click_returns();
+		  pr.test3_click_view();
+		  boolean result = pr.test3_return_output();
+		  if(result == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
 	  }
 }
