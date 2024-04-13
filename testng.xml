@@ -33,8 +33,9 @@
       <class name="testCases.Test19_OrderInformation"/>
       <class name="testCases.Test20_ProductReturns"/>
       <class name="testCases.Test21_Downloads"/>
-      <class name="testCases.Test22_RewardPoints"/>-->
-      <class name="testCases.Test23_Transactions"/>
+      <class name="testCases.Test22_RewardPoints"/>
+      <class name="testCases.Test23_Transactions"/>-->
+      <class name="testCases.Test24_RecurringPayments"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
