@@ -21,6 +21,9 @@ public class MyAccountPage extends BaseClass{
 	
 	//Action Methods
 	JavascriptExecutor js = (JavascriptExecutor)driver;
+	public void scroll_down_till_page_end() {
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
 	public void click_myaccount() {
 		driver.findElement(homemyaccount).click();
 	}
