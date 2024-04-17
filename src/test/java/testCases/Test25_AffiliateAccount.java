@@ -9,6 +9,7 @@ import pageObjects.Affiliate;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.Logout;
+import pageObjects.MyAccountPage;
 import testBase.BaseClass;
 
 public class Test25_AffiliateAccount extends BaseClass{
@@ -34,6 +35,8 @@ public class Test25_AffiliateAccount extends BaseClass{
 	}
   @Test(priority=1,groups = {"Sanity","Regression","Master"})
   public void test1_register_affiliate() throws Exception {
+	  MyAccountPage map = new MyAccountPage(driver);
+	  map.scroll_down_till_page_end();
 	  Affiliate af = new Affiliate(driver);
 	  af.test1_click_register_affiliate();
 	  af.test1_input_company(p.getProperty("company"));
