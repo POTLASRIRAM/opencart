@@ -33,6 +33,7 @@ public class Test25_AffiliateAccount extends BaseClass{
 		 lg.logout();
 		 System.out.println("Logout Successful");
 	}
+	/*
   @Test(priority=1,groups = {"Sanity","Regression","Master"})
   public void test1_register_affiliate() throws Exception {
 	  MyAccountPage map = new MyAccountPage(driver);
@@ -52,5 +53,20 @@ public class Test25_AffiliateAccount extends BaseClass{
 	  else {
 		  Assert.fail();
 	  }
-  }
+  }*/
+
+	  @Test(priority=2,groups = {"Sanity","Regression","Master"})
+	  public void test2_register_affiliate() throws Exception {
+		  MyAccountPage map = new MyAccountPage(driver);
+		  map.scroll_down_till_page_end();
+		  Affiliate af = new Affiliate(driver);
+		  af.test2_click_custom_affiliate_tracking();
+		  boolean result = af.test2_return_output();
+		  if(result == true) {
+			  Assert.assertTrue(true);
+		  }
+		  else {
+			  Assert.fail();
+		  }
+	  }
 }
