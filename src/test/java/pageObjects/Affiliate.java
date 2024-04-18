@@ -20,8 +20,27 @@ public class Affiliate extends BaseClass{
 	By aboutus_checkbox = By.xpath("//input[@name='agree']");
 	By cont = By.xpath("//input[@value='Continue']");
 	By successmsg = By.xpath("//div[@class='alert alert-success alert-dismissible']");
+	By custom_affiliate_tracking = By.xpath("//a[normalize-space()='Custom Affiliate Tracking Code']");
 	
 	//Action Methods
+	//Test2
+	public void test2_click_custom_affiliate_tracking() {
+		driver.findElement(custom_affiliate_tracking).click();
+	}
+	public boolean test2_return_output() {
+		boolean res = true;
+		String title = driver.getTitle();
+		String url = driver.getCurrentUrl();
+		if(title.matches("^[a-zA-Z].*$") && url.matches("^[a-zA-Z].*$")) {
+			res = true;
+		}
+		else {
+			res = false;
+		}
+		return res;
+	}
+	
+	//Test1
 	public void test1_click_register_affiliate() {
 		driver.findElement(register_affiliate).click();
 	}
