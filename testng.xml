@@ -35,8 +35,9 @@
       <class name="testCases.Test21_Downloads"/>
       <class name="testCases.Test22_RewardPoints"/>
       <class name="testCases.Test23_Transactions"/>
-      <class name="testCases.Test24_RecurringPayments"/>-->
-      <class name="testCases.Test25_AffiliateAccount"/>
+      <class name="testCases.Test24_RecurringPayments"/>
+      <class name="testCases.Test25_AffiliateAccount"/>-->
+      <class name="testCases.Test26_NewsLetter"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
