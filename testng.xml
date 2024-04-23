@@ -38,8 +38,9 @@
       <class name="testCases.Test24_RecurringPayments"/>
       <class name="testCases.Test25_AffiliateAccount"/>
       <class name="testCases.Test26_NewsLetter"/>
-      <class name="testCases.Test27_ContactUs"/>-->
-      <class name="testCases.Test28_GiftCertificate"/>
+      <class name="testCases.Test27_ContactUs"/>
+      <class name="testCases.Test28_GiftCertificate"/>-->
+      <class name="testCases.Test29_Specials"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
